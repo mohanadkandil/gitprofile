@@ -5,13 +5,13 @@ type IconProps = {
     tabIcon: React.ReactNode,
 }
 
-const leftBarTabs: IconProps[] = [
+export const leftBarTabs: IconProps[] = [
     {
         tabName: 'Introduction',
         tabIcon: <MdOutlineEdit />
     },
     {
-        tabName: 'Elements',
+        tabName: 'Skills',
         tabIcon: <IoShapesOutline />
     },
     {
