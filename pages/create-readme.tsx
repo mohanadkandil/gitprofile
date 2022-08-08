@@ -1,5 +1,6 @@
 import { Tab } from "@headlessui/react"
 import Introduction from "../components/Introduction"
+import Markdown from "../components/Markdown"
 import Skills from "../components/Skills"
 import leftBarTabs from "../data/leftBarTabs"
 
@@ -20,9 +21,9 @@ export default function CreateReadme() {
                           key={index}
                         >
                           <div className="text-white text-2xl">
-                            {tab.tabIcon}
+                            {tab?.tabIcon}
                           </div>
-                          <p className="text-slate-200">{tab.tabName}</p>
+                          <p className="text-slate-200">{tab?.tabName}</p>
                         </Tab>
                       ))}
                     </Tab.List>
@@ -44,7 +45,9 @@ export default function CreateReadme() {
             </div>
           </div>
         </Tab.Group>
-        <div className="w-full bg-green-600 p-4"></div>
+        <div className="w-full bg-gray-100 p-4">
+          <Markdown />
+        </div>
       </div>
     </div>
   )
