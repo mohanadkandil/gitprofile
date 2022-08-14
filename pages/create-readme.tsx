@@ -14,7 +14,8 @@ export default function CreateReadme() {
   const [portofilioLink, setPortofilioLink] = useState()
   const [contact, setContact] = useState()
   const [workingOn, setWorkingOn] = useState()
-  const [intrestedIn, setIntrestedIn] = useState()
+  const [workingOnText, setWorkingOnText] = useState("")
+  const [learning, setLearning] = useState()
   const [extraText, setExtraText] = useState()
 
   return (
@@ -127,10 +128,20 @@ export default function CreateReadme() {
                         inputName="current_project"
                         inputText="I'm Currently Working on:"
                         inputEmojiCode="&#128075;"
-                        inputPlaceholder="Contact me"
+                        inputPlaceholder="Myapp"
                         value={workingOn}
                         onChange={(e) => setWorkingOn(e.target.value)}
                       />
+                      <div className="mt-2">
+                        <input
+                          type="text"
+                          id="workingOnText"
+                          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          placeholder="App Link"
+                          value={workingOnText}
+                          onChange={(e) => setWorkingOnText(e.target.value)}
+                        />
+                      </div>
                     </div>
 
                     <div className="my-5">
@@ -139,8 +150,8 @@ export default function CreateReadme() {
                         inputText="I'm Intrested In:"
                         inputEmojiCode="&#128075;"
                         inputPlaceholder="Intrest"
-                        value={intrestedIn}
-                        onChange={(e) => setIntrestedIn(e.target.value)}
+                        value={learning}
+                        onChange={(e) => setLearning(e.target.value)}
                       />
                     </div>
 
@@ -173,8 +184,9 @@ export default function CreateReadme() {
             portofilioLink={portofilioLink}
             portofilioText={portofilioText}
             contact={contact}
-            workingOn={workingOn}
-            intrestedIn={intrestedIn}
+            workingOnLink={workingOn}
+            workingOnText={workingOnText}
+            learning={learning}
             extra={extraText}
             description={description}
           />
